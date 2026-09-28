@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediStock Dashboard</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <h2>💊 MediStock</h2>
+
+            <p class="subtitle">
+                Chemist Inventory System
+            </p>
+
+            <nav>
+
+                <a href="dashboard.html" class="active">
+                    🏠 Dashboard
+                </a>
+
+                <a href="inventory.html">
+                    💊 Inventory
+                </a>
+
+                <button id="logoutBtn">
+                    🚪 Logout
+                </button>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="dashboard-main">
+
+            <!-- Header -->
+
+            <div class="dashboard-header">
+
+                <div>
+
+                    <h1>Dashboard</h1>
+
+                    <p>
+                        Manage your medicine inventory easily.
+                    </p>
+
+                </div>
+
+                <div class="user-info">
+
+                    👤
+                    <span id="userEmail">
+                        Loading...
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= STATISTICS ================= -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <h3>
+                        💊 Total Medicines
+                    </h3>
+
+                    <p id="totalMedicines">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>
+                        📦 Total Quantity
+                    </h3>
+
+                    <p id="totalQuantity">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>
+                        ⚠️ Low Stock
+                    </h3>
+
+                    <p id="lowStock">
+                        0
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= RECENT INVENTORY ================= -->
+
+            <div class="dashboard-card">
+
+                <h2>
+                    📋 Recent Inventory
+                </h2>
+
+                <div id="recentInventory">
+
+                    <p>
+                        Loading inventory...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Supabase -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/supabase.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
