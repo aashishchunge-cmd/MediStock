@@ -767,7 +767,14 @@ async function startInventory() {
 
 
     await loadInventory();
+
+    requireAdmin().then(user => {
+
+    if (user) {
+        loadInventory();
+    }
+
+});
+
 }
 
-
-startInventory();

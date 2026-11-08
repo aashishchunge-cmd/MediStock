@@ -344,4 +344,10 @@ if (logoutBtn) {
    START
 ========================================= */
 
-loadDashboard();
+requireAdmin().then(user => {
+
+    if (user) {
+        loadDashboard();
+    }
+
+});
